@@ -3,9 +3,13 @@ import {
   Box,
   Heading,
   Image,
+  Button,
   useColorModeValue
 } from '@chakra-ui/react'
 import Section from '../components/section'
+import Paragraph from '../components/paragraph'
+import NextLink from 'next/link'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 
 const Home = () => {
   return (
@@ -51,7 +55,19 @@ const Home = () => {
         <Heading as="h3" variant="section-title">
           Work
         </Heading>
-        <p>Paragraph</p>
+        <Paragraph>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ad
+          officia necessitatibus repellendus ea distinctio adipisci, iusto sunt
+          tempora laudantium, quisquam fugiat esse, eligendi aut sapiente
+          voluptatum? Mollitia, sequi sed?
+        </Paragraph>
+        <Box align="center" my={4}>
+          <NextLink href="/works">
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+              My portfolio
+            </Button>
+          </NextLink>
+        </Box>
       </Section>
     </Container>
   )
